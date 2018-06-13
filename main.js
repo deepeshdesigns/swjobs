@@ -5414,7 +5414,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "p {\r\n    margin-top: 0;\r\n    margin-bottom: 0rem !important;\r\n}\r\n\r\n\r\nh5 {\r\n    margin-top: 0;\r\n    margin-bottom: 0rem !important;\r\n}\r\n\r\n\r\n.div-img {\r\n    padding-left:4px !important;\r\n    padding-right:4px !important;\r\n    top:20%;\r\n\r\n}\r\n\r\n\r\n.img {\r\n    height:18%!important;\r\n}\r\n\r\n\r\n.margin-10{\r\nmargin-left:5% !important;\r\n}\r\n\r\n\r\n@media only screen and (max-width: 600px) {\r\n\r\n.padding-list {\r\npadding-left:5%;\r\n    }\r\n\r\n}\r\n\r\n\r\n@media only screen and (min-width: 600px) {\r\n\r\n    .padding-list {\r\n    padding-left:1%;\r\n        }\r\n    \r\n    }\r\n    "
 
 /***/ }),
 
@@ -5425,7 +5425,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"card card-primary\">\n  <div class=\"card-header bg-primary \">\n    <ul class=\"nav nav-pills card-header-pills\">\n      \n      <li class=\"nav-item\" >\n          <button class=\"nav-link btn-primary\"(click)=\"callJobDetails()\" [disabled]=\"!buttonStatus\">Jobs Available</button>\n        <!--  <p *ngif=\"!buttonStatus\">Please refresh the page to start search </p>  -->\n        <!--<a class=\"nav-link active\" href=\"#\" (click)=\"callJobDetails()\" ng-disabled=\"buttonStatus\" >Jobs Available</a>-->\n      </li>\n      <li *ngIf=\"!buttonStatus\">Please refresh the page to <strong> re</strong> start search</li>\n    </ul>\n  </div>\n  <div class=\"card-body\" *ngIf=\"!buttonStatus\">\n    <div class=\"row\">\n        <div class=\"col-3 \"><img src=\"./assets/person.jpeg\" alt=\"...\" class=\"img-thumbnail\"></div>\n        <div class=\"col-9\">\n            <h5 class=\"card-title\">{{jobDetails.title}}</h5>\n             <p class=\"card-text\">{{jobDetails.company.name}}</p>\n             <p class=\"card-text\">${{jobDetails.wagePerHourInCents/100}} hour</p>\n             <p >{{startDate}} -  {{endDate}}</p>\n        </div>\n    </div>\n    <div class=\"row\">\n        <strong>If you take this job you are going to work \n          ALL DAYS</strong>\n        <ul class=\"list-group\" *ngFor=\"let dates of shiftsArray;let i=index\">\n        \n          <li class=\"list-group-item\">{{dates.day}},  {{dates.startDate}} {{dates.timeZone}} </li>\n          <li class=\"list-group-item\"></li>\n        \n        </ul>\n    </div>\n    <hr>\n    <div class=\"row\">\n        <h4 class=\"col-12\">Location:</h4>\n        <p class=\"col-12\"><a href=\"#\"><u>{{address}}</u></a></p>\n    </div>\n    <hr>\n    <div class=\"row\">\n        <h4 class=\"col-12\">Branch:</h4>\n        <p class=\"col-12\">{{jobDetails.branch}} <a href=\"#\"> {{jobDetails.branchPhoneNumber}}</a></p>\n    </div>\n    <hr>\n    <div class=\"row text-center\">\n        <div class=\"col-6\"><a href=\"#\">No Thanks</a></div>\n        <div class=\"col-6\"><a href=\"#\"> I will take it</a></div>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"card card-primary\">\n  <div class=\"card-header bg-primary \">\n    <ul class=\"nav nav-pills card-header-pills\">\n\n      \n        <div><button class=\"nav-link btn-primary\" (click)=\"callJobDetails()\" [disabled]=\"!buttonStatus\">Jobs Available</button></div>\n        \n        <!--  <p *ngif=\"!buttonStatus\">Please refresh the page to start search </p>  -->\n        <!--<a class=\"nav-link active\" href=\"#\" (click)=\"callJobDetails()\" ng-disabled=\"buttonStatus\" >Jobs Available</a>-->\n     <div><p *ngIf=\"!buttonStatus\">Please refresh the page to <strong> *restart</strong>  search</p></div>\n      \n    </ul>\n  </div>\n  <div class=\"card-body\" *ngIf=\"!buttonStatus\">\n    <div class=\"row\">\n      <div class=\"col-4 div-img \">\n        <img src=\"./assets/person.jpeg\" alt=\"...\" class=\"img-thumbnail img\">\n      </div>\n      <div class=\"col-8\">\n        <p class=\"card-title\"><strong>{{jobDetails.title}}</strong></p>\n        <p class=\"card-text\">{{jobDetails.company.name}}</p>\n        <p class=\"card-text\">${{jobDetails.wagePerHourInCents/100}} hour</p>\n        <p>{{startDate}} - {{endDate}}</p>\n      </div>\n    </div>\n    <br>\n    <div class=\"row \">\n     \n      <div class=\"col-12\"> <p><strong>If you take this job you are going to work ALL DAYS</strong></p></div>\n     \n      </div>\n            <div class=\"row padding-list\" *ngFor=\"let dates of shiftsArray;let i=index\">\n<p class=\"card-text\">{{dates.day}}, {{dates.startDate}}  {{dates.hour}}:{{dates.minutes}} {{dates.timeZone}}</p>\n              <!--\n      <ul class=\"list-group\" *ngFor=\"let dates of shiftsArray;let i=index\">\n        <li class=\"list-group-item\">{{dates.day}}, {{dates.startDate}} {{dates.hour}}:{{dates.minutes}} {{dates.timeZone}} </li>\n       </ul>\n      -->\n    </div>\n    <hr>\n    <div class=\"row\">\n      <h4 class=\"col-12\">Location:</h4>\n      <p class=\"col-12\">\n        <a href=\"#\">\n          <u>{{address}}</u>\n        </a>\n      </p>\n    </div>\n    <hr>\n    <div class=\"row\">\n      <h4 class=\"col-12\">Branch:</h4>\n      <p class=\"col-12\">{{jobDetails.branch}}\n        <a href=\"#\"> {{jobDetails.branchPhoneNumber}}</a>\n      </p>\n    </div>\n    <hr>\n    <div class=\"row text-center\">\n      <div class=\"col-6\">\n        <a href=\"#\">No Thanks</a>\n      </div>\n      <div class=\"col-6\">\n        <a href=\"#\"> I will take it</a>\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -5456,21 +5456,30 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var AppComponent = /** @class */ (function () {
     function AppComponent(userService) {
         this.userService = userService;
+        /*-------------------Details of each of the variables ---------------
+        1. title = dummy variable to test the title of the app
+        2. jobdetails - Type - object - Will get the payload from the service of the entire information
+        3. date = variable to manipulate with date related operations
+        4. buttonStatus - to toggle the enable/ disable of job details function
+        5. StartDate, endDate - to put the details of the start and end dates of engagement
+        6.weekday[] - to map the days of the week with the short acronym
+        7.shiftsArray - Array prepared in the data format as per rendering requirement
+        8. noofShifts - Assumed that the person is keen to take up 5 shifts from the start day of the engagement so picked only first 5 shift details
+        
+        */
         this.title = 'app works!';
         this.date = new Date;
         this.buttonStatus = true;
         this.weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
         this.shiftsArray = [];
         this.noOfShifts = 5;
-        this.datesArray = [];
     }
-    AppComponent.prototype.ngOnInit = function () {
-        console.log("view initialize");
-    };
-    AppComponent.prototype.ngAfterContentInit = function () {
-        // this.callJobDetails();
-        console.log("conentinit running many times");
-    };
+    /******Details of each of the function */
+    /*
+    Calljob Details
+    *This function is the main function that will be called on click of Job Available button in the main screen
+    * This function will call a list of synchronous functions
+    */
     AppComponent.prototype.callJobDetails = function () {
         console.log("job details called");
         this.getJobdetails();
@@ -5479,28 +5488,32 @@ var AppComponent = /** @class */ (function () {
         this.address = this.jobDetails.company.address;
         this.getStartEndDates();
     };
+    /*This function will fetch the data from the service (payload) into a component variable jobDetails */
     AppComponent.prototype.getJobdetails = function () {
         this.jobDetails = this.userService.loadUser();
     };
+    /*This function will fetch the data from the service (payload) into a component variable jobDetails */
     AppComponent.prototype.printJobDetails = function () {
         for (var i = 0; i < this.noOfShifts; i++) {
             var date = new Date(this.jobDetails.shifts[i].startDate);
-            /*--- Get short form of Timezone */
+            //Get short form of Timezone 
             var matches = date.toLocaleTimeString('en-US', { timeZoneName: "long" }).match(/\b(\w)/g);
-            // ['J','S','O','N']
             var acronym = matches.join('');
-            /*---------------------------------*/
-            var shiftsnew = new shifts(this.weekday[date.getDay()], date.toLocaleDateString('en-US', { month: "short", day: "numeric", hour: 'numeric', minute: 'numeric', hour12: true }), acronym.substr(4, 5));
+            //Two digit minutes computation
+            var minutes = date.getMinutes();
+            var minutesString = minutes > 9 ? minutes : '0' + minutes;
+            //Build the array in the format to be rendered
+            var shiftsnew = new shifts(this.weekday[date.getDay()], date.toLocaleDateString('en-US', { month: "short", day: "numeric" }), date.getHours(), minutesString, acronym.substr(4, 5));
             this.shiftsArray.push(shiftsnew);
-        }
+        } // for loop ends here 
     };
+    /* This function is used to get the start and end dates of the engagement to be rendered */
     AppComponent.prototype.getStartEndDates = function () {
         var lastindex = this.jobDetails.shifts.length - 1;
         var date = new Date(this.jobDetails.shifts[0].startDate);
         this.startDate = this.weekday[date.getDay()] + ", " + date.toLocaleDateString('en-US', { month: "short", day: "numeric" });
         date = new Date(this.jobDetails.shifts[lastindex].startDate);
         this.endDate = this.weekday[date.getDay()] + " ," + date.toLocaleDateString('en-US', { month: "short", day: "numeric" });
-        //let date = new Date(this.jobDetails.shifts[jobDetails.].startDate);
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -5508,19 +5521,20 @@ var AppComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")],
             providers: [_services_service__WEBPACK_IMPORTED_MODULE_1__["ServicesService"]]
-        })
-        /* export class AppComponent implements OnInit { */
-        // export class AppComponent implements AfterViewInit,OnInit {
-        ,
+        }),
         __metadata("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_1__["ServicesService"]])
     ], AppComponent);
     return AppComponent;
 }());
 
+/* End of the component class here------------------------------------------------------------------------------------------------------- */
+/* Interface class for array of objects to render data in the view */
 var shifts = /** @class */ (function () {
-    function shifts(Day, StartDate, TimeZone) {
+    function shifts(Day, StartDate, Hour, Minutes, TimeZone) {
         this.day = Day;
         this.startDate = StartDate;
+        this.hour = Hour;
+        this.minutes = Minutes;
         this.timeZone = TimeZone;
     }
     return shifts;
@@ -5659,10 +5673,13 @@ var ServicesService = /** @class */ (function () {
             branchPhoneNumber: "253"
         };
     }
-    ServicesService.prototype.getjob = function (jobtype) {
-        return this.http.get("https://conduit.productionready.io/api/profiles/eric");
-    };
-    //jobDetails:any;
+    /* Dummy API call had the data been called from an API
+  
+   getjob(jobtype:any) {
+      return this.http.get(`https://conduit.productionready.io/api/profiles/eric`);
+      }
+  
+      */
     ServicesService.prototype.loadUser = function () {
         return this.jobDetails;
     };
